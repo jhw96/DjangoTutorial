@@ -13,9 +13,15 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path
+from community.views import *;
 
+# 외부에서 유저들이 접근할 수 있는 url들이 표시됨
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('write/', write, name='write'),
+    path('list/', list, name='list'),
+    path('view/<int:num>/', view),
 ]

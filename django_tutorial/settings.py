@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'community' # ./manage.py startapp 명령어를 통해 우리가 만든 app을 실행할 수 있도록 설정
 ]
 
 MIDDLEWARE = [
